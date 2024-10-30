@@ -1,0 +1,203 @@
+:root {
+  --dynamic-color: #2bb88a; /* 默认颜色 */
+  --themeColor: #2bb88a;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 1200px;
+  height: 100vh;
+  font-size: 14px;
+  @media screen and (max-width: 768px) {
+    min-width: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a,
+p,
+ul,
+li,
+button,
+input,
+label {
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+}
+
+#loader {
+  display: block !important;
+  margin: auto;
+  width: 100pt;
+  height: 100pt;
+  border: 10pt solid #cccccc;
+  border-bottom-color: #00a2ff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-exit {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+
+._next_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  ._next_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: auto;
+    ._next_page {
+      flex: 1;
+    }
+  }
+}
+
+.ant-carousel .slick-dots li button {
+  background-color: #888888;
+  color: #888888;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: #2bb88a;
+}
+
+.ant-carousel {
+  .slick-prev {
+    font-size: 40px;
+    color: #2bb88a;
+  }
+  .slick-next {
+    font-size: 40px;
+    color: #2bb88a;
+  }
+}
+
+.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  border-color: var(--dynamic-color);
+}
+.ant-input:focus,
+.ant-input:hover,
+.ant-select-focused .ant-select-selector,
+.ant-select:hover .ant-select-selector,
+.ant-picker-focused .ant-picker,
+.ant-picker:hover,
+.ant-input-number-focused .ant-input-number-input,
+.ant-input-number:hover .ant-input-number-input,
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper-focused {
+  box-shadow: none !important;
+  border-color: var(--dynamic-color) !important;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  border-color: var(--dynamic-color);
+  a {
+    color: var(--dynamic-color);
+  }
+  &:hover {
+    border-color: var(--dynamic-color);
+    a {
+      color: var(--dynamic-color);
+    }
+  }
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  border-color: #d9d9d9 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  border-color: var(--dynamic-color) !important;
+  background-color: var(--dynamic-color) !important;
+}
+
+/* 聚焦时去除黑边并添加自定义样式 */
+input:focus {
+  outline: none; /* 去除默认黑边 */
+  border-color: #2bb88a; /* 添加自定义边框颜色 */
+  box-shadow: none;
+}
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+  border-color: #2bb88a;
+  background-color: #2bb88a;
+}
+.ant-radio-wrapper:hover .ant-radio-inner {
+  border-color: #2bb88a;
+}
+.ant-modal .ant-modal-content {
+  padding: 20px 24px !important;
+}
+.ant-modal .ant-modal-close-x {
+  font-size: 16px !important;
+}
+.ant-modal .ant-modal-close {
+  width: 32px !important;
+  height: 32px !important;
+}
+.ant-btn-primary {
+  background-color: #2bb88a !important;
+  &:hover {
+    background-color: #00a2ff !important;
+  }
+}
+.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+  color: #2bb88a !important;
+  border-color: #2bb88a !important;
+}
+.ant-radio-wrapper {
+  margin-right: 40px !important;
+}
+.ant-radio-wrapper .ant-radio-inner {
+  width: 16px !important;
+  height: 16px !important;
+  &::after {
+    width: 16px !important;
+    height: 16px !important;
+    margin-block-start: -8px !important;
+    margin-inline-start: -8px !important;
+  }
+}
+.ant-radio-wrapper {
+  font-size: 14px;
+}
+.ant-input-textarea-affix-wrapper.ant-input-affix-wrapper > textarea.ant-input {
+  font-size: 14px;
+}
+.ant-input-textarea-show-count .ant-input-data-count {
+  font-size: 14px;
+}

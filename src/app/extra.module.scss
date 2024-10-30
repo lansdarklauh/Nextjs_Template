@@ -1,0 +1,31 @@
+.notFound {
+  padding: 100px;
+  .notFound_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .notFound_img {
+      width: 60%;
+      max-width: 600px;
+    }
+    .notFound_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px;
+      .notFound_text {
+        font-size: 24px;
+        font-weight: 400;
+        color: #333;
+        text-align: center;
+      }
+      .notFound_back {
+        font-size: 24px;
+        font-weight: 400;
+        color: #00a2ff;
+        text-align: left;
+      }
+    }
+  }
+}
